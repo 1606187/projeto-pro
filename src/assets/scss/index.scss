@@ -1,0 +1,38 @@
+@import "cores.scss";
+@import "resets.scss";
+@import "layout.scss";
+
+main {
+  padding: 10px;
+
+  .caixa-listagem {
+    background-color: $cinza-claro;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    &__cabecalho {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      input {
+        border-radius: 3px;
+        border: solid 2px $cinza-medio;
+        padding-left: 10px;
+        box-sizing: border-box;
+      }
+
+      input:focus-visible {
+        outline: none;
+      }
+    }
+
+    &__principal {
+      table {
+        width: 100%;
+      }
+    }
+  }
+}

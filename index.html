@@ -1,17 +1,59 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Projeto PRO</title>
-  </head>
-  <body>
 
-    <a href="cadastro.html">Página de cadastro</a>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projeto PRO</title>
+</head>
 
-    <h1>Projeto PRO</h1>
+<body>
 
-    <script type="module" src="/main.js"></script>
-  </body>
+  <header class="cabecalho">
+    <h1>Página do Cliente</h1>
+    <nav class="cabecalho__menu">
+      <a href="index.html">Lista</a>
+      <a href="cadastro.html">Gerência</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="caixa-listagem">
+      <header class="caixa-listagem__cabecalho">
+        <h2>Lista de Livros</h2>
+        <input placeholder="Buscar" type="text">
+      </header>
+      <!-- Em construção -->
+      <div class="caixa-listagem__principal">
+        <table border="2">
+          <thead>
+            <tr>
+              <th>Título</th>
+              <th>Descrição</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>...</td>
+              <td>...</td>
+            </tr>
+            <tr>
+              <td>...</td>
+              <td>...</td>
+            </tr>
+            <tr>
+              <td>...</td>
+              <td>...</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+
+
+  <script type="module" src="/main.js"></script>
+</body>
+
 </html>
