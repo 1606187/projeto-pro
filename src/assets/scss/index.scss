@@ -4,13 +4,19 @@
 
 main {
   padding: 10px;
+  display: flex;
+  justify-content: center;
 
   .caixa-listagem {
     background-color: $cinza-claro;
+    flex-grow: 1;
+    max-width: 800px;
     padding: 20px;
     display: flex;
     flex-direction: column;
     gap: 15px;
+    min-height: fit-content;
+    max-height: 400px;
 
     &__cabecalho {
       display: flex;
