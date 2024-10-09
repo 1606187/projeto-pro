@@ -1,14 +1,22 @@
 import './src/assets/scss/index.scss'
 
-console.log("Importação funcionou!")
-
 window.addEventListener("load", iniciarProcesso)
+document.getElementById("inputBusca")
+    .addEventListener("keyup", iniciarBusca)
+
+console.log("=== EXECUTANDO CONTEXTO GLOBAL !!! ====")
+let livros = [] // Global
 
 async function iniciarProcesso() {
-    // 1 - Fazer chamada para a API e pegar todos os livros
-    const livros = await buscarLivros()
-    // 2 - Botar os livros na tabela
+    livros = await buscarLivros()
     construirTabelaComLivros(livros)
+}
+
+function iniciarBusca(){
+    const valorDeBusca = document.getElementById("inputBusca").value
+    const livrosFiltrados = livros.filter((livro) => livro.title.includes(valorDeBusca))
+
+    construirTabelaComLivros(livrosFiltrados)
 }
 
 async function buscarLivros() {
